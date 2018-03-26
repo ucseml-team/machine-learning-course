@@ -1,0 +1,88 @@
+/* For IPython */
+
+
+div.rendered_html tr, div.rendered_html th, div.rendered_html td {
+    border: 1px solid #121212;
+}
+
+div.input_prompt {
+    color: #3b759d;
+}
+
+div.output_prompt {
+    color: #de5060;
+}
+
+
+/* For reveal */
+
+body {
+  background: url("background.png");
+  background-position: center;
+  background-size: 100%;
+}
+
+.reveal {
+  font-family: "Verdana", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-size: 2em;
+  color: #46bd66;
+  font-family: "Tahoma", sans-serif;
+  line-height: 0.9em;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  text-shadow: 0.1em 0.1em #dddddd;
+}
+
+.reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #555555;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #555555;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #555555;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #555555;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #333333;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #333333;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #333333;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #333333;
+}
+
+.reveal .progress span {
+  background: #3b759e;
+}
