@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="753.02533"
+   height="512.17157"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="neural_networks_1.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="220.83802"
+     inkscape:cy="296.03887"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="-933.88167,314.57032"
+       id="guide3773" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(13.261191,-140.47524)">
+    <circle
+       style="fill:none;stroke:#000080;stroke-width:13;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3020"
+       transform="translate(108.22442,154.00129)"
+       cx="224.75894"
+       cy="172.00404"
+       r="91.418808" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 94.082294,172.96722 255.7067,277.01293"
+       id="path3035"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 95.092444,476.51806 256.71686,372.47235"
+       id="path3035-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 46.220531,329.53199 192.217839,0.51068"
+       id="path3035-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:15.17263985;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 428.38468,329.37184 297.10106,0.33804"
+       id="path3035-7-9"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="37.798019"
+       y="167.83524"
+       id="text3878"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3880"
+         x="37.798019"
+         y="167.83524">x1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="-9.8009777"
+       y="338.63223"
+       id="text3882"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3884"
+         x="-9.8009777"
+         y="338.63223">x2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="39.716805"
+       y="499.24649"
+       id="text3886"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3888"
+         x="39.716805"
+         y="499.24649">x3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="447.63568"
+       y="304.28705"
+       id="text3890"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="447.63568"
+         y="304.28705"
+         id="tspan3013">Act()</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;"
+       x="177.92496"
+       y="199.2312"
+       id="text3894"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3896"
+         x="177.92496"
+         y="199.2312">p1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;"
+       x="117.56211"
+       y="307.48615"
+       id="text3894-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3896-0"
+         x="117.56211"
+         y="307.48615">p2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;"
+       x="117.5621"
+       y="416.58261"
+       id="text3894-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="117.5621"
+         y="416.58261"
+         id="tspan3928">p3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:none;"
+       x="311.95078"
+       y="335.77039"
+       id="text3894-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3896-3"
+         x="311.95078"
+         y="335.77039">p4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:CPMono_v07;-inkscape-font-specification:'CPMono_v07 Semi-Light';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="-15.061191"
+       y="646.01678"
+       id="text3890-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-15.061191"
+         y="646.01678"
+         id="tspan3013-6">f(x1,x2,x3) = Act(<tspan
+   style="fill:#008000"
+   id="tspan4157">p1</tspan>*x1+<tspan
+   style="fill:#008000"
+   id="tspan4159">p2</tspan>*x2+<tspan
+   style="fill:#008000"
+   id="tspan4161">p3</tspan>*x3+<tspan
+   style="fill:#008000"
+   id="tspan4163">p4</tspan>)</tspan></text>
+  </g>
+</svg>
