@@ -1,0 +1,15 @@
+dia;nubosidad;temperatura;humedad;viento;estrellas_visibles
+1;soleado;caluroso;alta;leve;no
+2;soleado;caluroso;alta;fuerte;no
+3;nublado;caluroso;alta;leve;si
+4;lluvia;templado;alta;leve;si
+5;lluvia;frio;normal;leve;si
+6;lluvia;frio;normal;fuerte;no
+7;nublado;frio;normal;fuerte;si
+8;soleado;templado;alta;leve;no
+9;soleado;frio;normal;leve;si
+10;lluvia;templado;normal;leve;si
+11;soleado;templado;normal;fuerte;si
+12;nublado;templado;alta;fuerte;si
+13;nublado;caluroso;normal;leve;si
+14;lluvia;templado;alta;fuerte;no
