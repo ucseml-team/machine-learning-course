@@ -8,14 +8,14 @@ from orbit_predictor.locations import Location
 objects = (
     ("iss", "zarya", 25544),
     ("newsat-3", "milanesat", 42760),
-    ("newsat-4", "ada", 43195),
-    ("newsat-5", "maryam", 43204),
-    ("newsat-7", "sophie", 45017),
-    ("newsat-8", "marie", 45018),
+    ("newsat-28", "alice", 52747),
+    ("newsat-29", "edith", 52764),
+    ("newsat-30", "margherita", 52748),
+    ("newsat-31", "ruby", 52752),
 )
 
-start = datetime(2022, 1, 1)
-end = datetime(2023, 1, 1)
+start = datetime(2023, 1, 1)
+end = datetime(2024, 1, 1)
 
 location = Location("UCSE DAR", latitude_deg=-31.266933, longitude_deg=-61.496106, elevation_m=90)
 
