@@ -9,13 +9,12 @@ objects = (
     ("iss", "zarya", 25544),
     ("newsat-3", "milanesat", 42760),
     ("newsat-28", "alice", 52747),
-    ("newsat-29", "edith", 52764),
-    ("newsat-30", "margherita", 52748),
-    ("newsat-31", "ruby", 52752),
+    ("newsat-34", "amelia", 55045),
+    ("newsat-36", "annie", 56190),
 )
 
-start = datetime(2023, 1, 1)
-end = datetime(2024, 1, 1)
+start = datetime(2024, 1, 1)
+end = datetime(2025, 1, 1)
 
 location = Location("UCSE DAR", latitude_deg=-31.266933, longitude_deg=-61.496106, elevation_m=90)
 
