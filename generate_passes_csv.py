@@ -7,14 +7,16 @@ from orbit_predictor.locations import Location
 
 objects = (
     ("iss", "zarya", 25544),
-    ("newsat-3", "milanesat", 42760),
+    # ("newsat-3", "milanesat", 42760),
     ("newsat-28", "alice", 52747),
     ("newsat-34", "amelia", 55045),
-    ("newsat-36", "annie", 56190),
+    ("newsat-37", "joan", 56203),
+    ("newsat-50", "nancy", 60493),
+    # ("newsat-36", "annie", 56190),
 )
 
-start = datetime(2024, 1, 1)
-end = datetime(2025, 1, 1)
+start = datetime(2025, 1, 1)
+end = datetime(2026, 1, 1)
 
 location = Location("UCSE DAR", latitude_deg=-31.266933, longitude_deg=-61.496106, elevation_m=90)
 
@@ -22,8 +24,10 @@ with open("./sate_passes.csv", "w") as passes_file:
     passes_file.write("sate,nickname,norad_id,start,center,end,elevation\n")
 
     for object_id, object_nick, norad_id in objects:
+        tle_url = f"https://celestrak.com/NORAD/elements/gp.php?CATNR={norad_id}&FORMAT=tle"
         print("Getting tle for", object_id)
-        response = requests.get(f"https://celestrak.com/NORAD/elements/gp.php?CATNR={norad_id}&FORMAT=tle")
+        print("Url:", tle_url)
+        response = requests.get(tle_url)
         tle_lines = response.content.decode("utf-8").strip().split("\n")[1:3]
 
         print("Generating passes for", object_id)
