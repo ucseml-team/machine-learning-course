@@ -7555,6 +7555,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Missing Completely at Random (MCAR):</strong></p>
+<p>La data que falta no depende ni de la data faltante misma, ni de la data observada.</p>
+<p>Ej: Grabamos datos con una estación meteorológica, pero cada tanto el sensor de temperatura se rompe, haciendo que perdamos unos días de datos. La rotura del sensor es 100% al azar y no depende de datos que podamos tener (los valores de los otros sensores), ni de la data que perdimos tampoco. Seguimos teniendo muchos casos representativos de todo nuestro dataset, que ayudan a deducir la data faltante.</p>
 <p><img alt="" src="images/mcar.png"/></p>
 </div>
 </div>
@@ -7566,6 +7569,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Missing at Random (MAR):</strong></p>
+<p>La data que falta se pierde al azar, pero ese azar tiene relación con data que sí tenemos.</p>
+<p>Ej: Grabamos datos con una estación meteorológica, pero cada tanto el sensor de humedad deja de darnos valores. Pero hay mucha más probabilidad de que se rompa cuando hace mucho frío que cuando hace calor. Sigue habiendo azar en cuándo se pierde data, pero las chances de que falte el dato de humedad dependen mucho de otro dato que sí tenemos (temperatura). Y todavía tenemos data suficiente para deducir valores plausibles para los faltantes.</p>
 <p><img alt="" src="images/mar.png"/></p>
 </div>
 </div>
@@ -7577,6 +7583,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Missing not at random (MNAR):</strong></p>
+<p>La data que falta <strong>NO</strong> se perdió al azar, sino que depende justamente de la data que no tenemos.</p>
+<p>Ej: Grabamos datos con una estación meteorológica, pero el sensor de viento se traba y no da valores por encima de 20 km/h. A partir de 20 km/h lo que sucede es completamente desconocido, y no tenemos nada que nos permita inferir cómo serían los valores, cómo varían en ese rango, etc.</p>
 <p><img alt="" src="images/mnar.png"/></p>
 </div>
 </div>
