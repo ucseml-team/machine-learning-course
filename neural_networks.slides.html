@@ -8435,11 +8435,51 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="MAGIA">MAGIA<a class="anchor-link" href="#MAGIA">¶</a></h1><p><img alt="" src="images/magic.jpg"/></p>
+<h1 id="Diffusion-models:-C%C3%B3mo-funcionan???">Diffusion models: Cómo funcionan???<a class="anchor-link" href="#Diffusion-models:-C%C3%B3mo-funcionan???">¶</a></h1>
 </div>
 </div>
 </div>
 </div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Generación de imágenes</p>
+<p><img alt="" src="images/diffusion-model.gif"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>No nos vamos a meter demasiado en la matemática detrás, pero básicamente:</p>
+<ul>
+<li>Tomamos imágenes reales.</li>
+<li>Las convertimos en ruido, por ejemplo agregando ruido gausiano.</li>
+<li>Entrenamos una red que intente <strong>sacar</strong> el ruido de la imagen: ruido como input, imagen como output.</li>
+<li>Nuestra red ahora puede recibir nuevo ruido <strong>random</strong> y producir una imagen como resultado.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Para elegir qué dibujar, podemos agregar inputs a la red (categoría, texto, clases por regiones, etc).</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8457,7 +8497,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Es un concepto <strong>muy</strong> avanzado para lo que llegamos a cubrir en la materia. Pero algunas generalidades:</p>
+<p>Es un concepto <strong>muy</strong> avanzado para lo que llegamos a cubrir en la materia. Pero algunas generalidades y un poco de historia:</p>
 </div>
 </div>
 </div>
@@ -8469,15 +8509,30 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Language models para generación de texto (next token prediction, seq2seq, ...)</li>
-<li>Redes recurrentes... y el problema de los gradientes (recordar a largo plazo).</li>
-<li>LSTMs... mejor recordando a largo plazo, pero igual limitado.</li>
-<li>Transformers! All you need is attention. Ya no recurrentes, ver todo y decidir dónde enfocarse (GPT3 = 2048 words, GPT4 = 25000 words).</li>
+<li>Language models hay desde hace rato: redes recurrentes, LSTMs, pero tenían problemas por el enfoque (el texto "viajando" dentro de la red de a pasos, retroalimentación para recordar inputs anteriores, gradientes).</li>
+<li>Transformers! All you need is attention. Ya no recurrentes, ver todo y parte de la red usada para decidir dónde enfocarse (GPT3 = 2048 words, GPT4 = 25000 words).</li>
 </ul>
 </div>
 </div>
 </div>
 </div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>En los LLMs actuales:</p>
+<ul>
+<li>Es todo predicción de próximo token. A veces con pasos extras (ej: internal monologue).</li>
+<li>Inputs: cadena de tokens. Output: probabilidades para cada token posible.</li>
+<li>Entrenadas con volúmenes gigantes de textos de ejemplo, usando el último token de cada ejemplo (conocido) como target esperado (la red no lo recibe en los inputs).</li>
+<li>Muy potentes, pero también muy ineficientes y costosos actualmente. Quizás mejore?</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
