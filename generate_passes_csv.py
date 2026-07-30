@@ -1,4 +1,11 @@
-# requires: orbit-predictor, requests (pip install orbit-predictor requests)
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "orbit-predictor",
+#     "requests",
+# ]
+# ///
 from datetime import datetime
 
 import requests
@@ -8,15 +15,16 @@ from orbit_predictor.locations import Location
 objects = (
     ("iss", "zarya", 25544),
     # ("newsat-3", "milanesat", 42760),
-    ("newsat-28", "alice", 52747),
+    # ("newsat-28", "alice", 52747),
     ("newsat-34", "amelia", 55045),
     ("newsat-37", "joan", 56203),
+    ("newsat-48", "henrietta", 60498),
     ("newsat-50", "nancy", 60493),
     # ("newsat-36", "annie", 56190),
 )
 
-start = datetime(2025, 1, 1)
-end = datetime(2026, 1, 1)
+start = datetime(2026, 1, 1)
+end = datetime(2027, 1, 1)
 
 location = Location("UCSE DAR", latitude_deg=-31.266933, longitude_deg=-61.496106, elevation_m=90)
 
@@ -24,7 +32,7 @@ with open("./sate_passes.csv", "w") as passes_file:
     passes_file.write("sate,nickname,norad_id,start,center,end,elevation\n")
 
     for object_id, object_nick, norad_id in objects:
-        tle_url = f"https://celestrak.com/NORAD/elements/gp.php?CATNR={norad_id}&FORMAT=tle"
+        tle_url = f"http://celestrak.com/NORAD/elements/gp.php?CATNR={norad_id}&FORMAT=tle"
         print("Getting tle for", object_id)
         print("Url:", tle_url)
         response = requests.get(tle_url)
