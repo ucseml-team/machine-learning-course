@@ -5,8 +5,8 @@
 <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<title>intro-general-modelos slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+<title>intro-modelos-y-supervisado slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7452,7 +7452,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Qu%C3%A9-es?">Qué es?<a class="anchor-link" href="#Qu%C3%A9-es?">¶</a></h1>
+<h1 id="Repasando">Repasando<a class="anchor-link" href="#Repasando">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7492,6 +7492,32 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Hay muchas diferencias y salvedades que ya vamos a aprender, pero en general:</p>
 <p>En ML, queremos <strong>entrenar</strong> un <strong>modelo</strong> para que luego (ya habiendo aprendido) sepa hacer bien una <strong>tarea</strong>.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Por-qu%C3%A9-entrenar-un-modelo-para-hacer-una-tarea?">Por qué entrenar un modelo para hacer una tarea?<a class="anchor-link" href="#Por-qu%C3%A9-entrenar-un-modelo-para-hacer-una-tarea?">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>Puede que los <strong>humanos no sepan hacerlo</strong> por si mismos (ej: predecir ataques de convulciones).</li>
+<li>Puede que los <strong>humanos lo sepan hacer, pero no tan bien</strong> (ej: predecir partidos de fútbol).</li>
+<li>Puede que los humanos lo hagan re bien, pero <strong>necesitamos hacerlo en masa y automatizarlo</strong> (ej: detectar objetos en imágenes).</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7563,6 +7589,55 @@ main {
 </div>
 </div>
 </div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Aprendizaje-por-refuerzo">Aprendizaje por refuerzo<a class="anchor-link" href="#Aprendizaje-por-refuerzo">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Idea principal: encontrar una <strong>función</strong> que me permita accionar en el mundo para maximizar una meta.</p>
+<p>Nosotros tenemos un <strong>ambiente donde experimentar</strong> y una forma de medir los resultados.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Ejemplos:</p>
+<ul>
+<li>Entrenemos este robot para que sepa subir escaleras, probando en un ambiente simulado hasta que le salga.</li>
+<li>Entrenemos este bot para jugar al super mario, dejándolo jugar millones de partidas.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="" src="images/reinforcement_learning_1.svg"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7642,6 +7717,7 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Idea principal: encontrar una <strong>función</strong> que explique los datos de salida a partir de los datos de entrada.</p>
 <p>Nosotros tenemos <strong>ambos</strong> grupos de datos.</p>
+<p>Y la mayor parte de la materia se va a enfocar en este tipo de aprendizaje!</p>
 </div>
 </div>
 </div>
@@ -7675,6 +7751,29 @@ main {
 </div>
 </div>
 </div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="No-es-m%C3%A1gico">No es mágico<a class="anchor-link" href="#No-es-m%C3%A1gico">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Las salidas tienen que de alguna forma, <strong>depender</strong> de las entradas.</p>
+<p>No podemos predecir lo que va a salir en la lotería en base al color de la ropa de Mariano (si es realmente al azar).</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7800,7 +7899,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Aprendizaje-por-refuerzo">Aprendizaje por refuerzo<a class="anchor-link" href="#Aprendizaje-por-refuerzo">¶</a></h1>
+<h1 id="Regresi%C3%B3n-vs-clasificaci%C3%B3n">Regresión vs clasificación<a class="anchor-link" href="#Regresi%C3%B3n-vs-clasificaci%C3%B3n">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7811,8 +7910,12 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Idea principal: encontrar una <strong>función</strong> que me permita accionar en el mundo para maximizar una meta.</p>
-<p>Nosotros tenemos un <strong>ambiente donde experimentar</strong> y una forma de medir los resultados.</p>
+<p>Depende de cómo son nuestras salidas:</p>
+<ul>
+<li>Numéros arbitrarios?: <strong>regresión</strong></li>
+<li>Valores de un conjunto finito de etiquetas?: <strong>clasificación</strong></li>
+</ul>
+<p>Queremos una función que <strong>pase</strong> por los puntos o una función que <strong>divida</strong> los puntos.</p>
 </div>
 </div>
 </div>
@@ -7823,11 +7926,57 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ejemplos:</p>
+<h1 id="Funci%C3%B3n-resultante">Función resultante<a class="anchor-link" href="#Funci%C3%B3n-resultante">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>En ambos casos (de aprendizaje supervisado), nuestro modelo termina siendo <strong>una función</strong>, que recibe datos de entrada, y nos da una salida.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>En <strong>regresión</strong>, esa función nos da las salidas directamente. El número que queremos.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="n">precio_casa</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_casa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>En <strong>clasificación</strong> depende.</p>
 <ul>
-<li>Entrenemos este robot para que sepa subir escaleras, probando en un ambiente simulado hasta que le salga.</li>
-<li>Entrenemos este bot para jugar al super mario, dejándolo jugar millones de partidas.</li>
+<li>Hay algoritmos (modelos) que dan directamente la etiqueta como salida.</li>
+<li>Otros nos dan un número que nosotros usamos para elegir la etiqueta.</li>
 </ul>
+<p>Nos dan una función que es una <strong>frontera de decisión</strong>, porque dibuja una linea que separa los ejemplos de una clase y otra.</p>
 </div>
 </div>
 </div>
@@ -7838,11 +7987,157 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/reinforcement_learning_1.svg"/></p>
+<p>Algunos modelos:</p>
+<div class="highlight"><pre><span></span><span class="n">raza_perro</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_perro</span><span class="p">)</span>
+<span class="c1"># galgo, gran danés, chihuahua, etc...</span>
+</pre></div>
+<p>Otros modelos:</p>
+<div class="highlight"><pre><span></span><span class="n">valor</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_pasajero_titanic</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+    <span class="n">salida</span> <span class="o">=</span> <span class="s2">"muere"</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">salida</span> <span class="o">=</span> <span class="s2">"no muere"</span>
+</pre></div>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Es casi como decir que hacemos clasificación, usando regresión por dentro.</p>
+<p>(vamos a retomar esa idea más adelante)</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>La mayoría de las libs nos ahorran tener que hacer esos ifs a mano, lo hacen internamente.</p>
+<p>Pero es importante saberlo, porque <strong>les podemos pedir el número también</strong>, y eso nos dice <strong>qué tan seguro está el modelo respecto a la salida</strong> que nos dio.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Y redes neuronales son un mundo aparte...</p>
+<p>(pueden tener N salidas a la vez!)</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Clasificaci%C3%B3n-multiclase">Clasificación multiclase<a class="anchor-link" href="#Clasificaci%C3%B3n-multiclase">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Muchas veces vamos a tener que clasificar entre más de 2 clases. Eso requiere de un modelo "<strong>multiclase</strong>".</p>
+<p>Algunos modelos de clasificación son multiclase de forma "<strong>nativa</strong>", y otros no.</p>
+<p>Los que no, inicialmente solo funcionan para distinguir entre 2 clases, "es o no es X", "sí o no", etc.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Cómo resolvemos este caso con un modelo que no es multiclase nativo?</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="" src="images/multiclass_classification_1.svg"/></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Se puede!</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="" src="images/multiclass_classification_2.svg"/></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="n">es_coca</span> <span class="o">=</span> <span class="n">modelo_coca</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_bebida</span><span class="p">)</span>
+<span class="n">es_pepsi</span> <span class="o">=</span> <span class="n">modelo_pepsi</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_bebida</span><span class="p">)</span>
+<span class="n">es_7up</span> <span class="o">=</span> <span class="n">modelo_7up</span><span class="o">.</span><span class="n">predecir</span><span class="p">(</span><span class="n">datos_bebida</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">es_coca</span> <span class="o">&gt;</span> <span class="n">es_pepsi</span> <span class="n">y</span> <span class="n">es_7up</span><span class="p">:</span>
+    <span class="n">salida</span> <span class="o">=</span> <span class="s2">"coca cola"</span>
+<span class="k">if</span> <span class="n">es_pepsi</span> <span class="o">&gt;</span> <span class="n">es_coca</span> <span class="n">y</span> <span class="n">es_7up</span><span class="p">:</span>
+    <span class="n">salida</span> <span class="o">=</span> <span class="s2">"pepsi"</span>
+<span class="k">if</span> <span class="n">es_7up</span> <span class="o">&gt;</span> <span class="n">es_pepsi</span> <span class="n">y</span> <span class="n">es_coca</span><span class="p">:</span>
+    <span class="n">salida</span> <span class="o">=</span> <span class="s2">"7up"</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Problema: muchas clases -&gt; muchos modelos a entrenar -&gt; mucho cálculo, ram, etc</p>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7993,28 +8288,6 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><img alt="" src="images/parametricos_vs_no_parametricos.svg"/></p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="El-proceso-de-Machine-Learning">El proceso de Machine Learning<a class="anchor-link" href="#El-proceso-de-Machine-Learning">¶</a></h1>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/ml_process.svg"/></p>
 </div>
 </div>
 </div>
