@@ -1,0 +1,15 @@
+pr_id;tamanio_diff;dia_semana;toca_migraciones;tests_agregados;build_falla
+PR-100;grande;viernes;si;si;si
+PR-101;grande;viernes;si;no;si
+PR-102;chico;viernes;si;si;no
+PR-103;medio;miercoles;si;si;no
+PR-104;medio;lunes;no;si;no
+PR-105;medio;lunes;no;no;si
+PR-106;chico;lunes;no;no;no
+PR-107;grande;miercoles;si;si;si
+PR-108;grande;lunes;no;si;no
+PR-109;medio;miercoles;no;si;no
+PR-110;grande;miercoles;no;no;no
+PR-111;chico;miercoles;si;no;no
+PR-112;chico;viernes;no;si;no
+PR-113;medio;miercoles;si;no;si
