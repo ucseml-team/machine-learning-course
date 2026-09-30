@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>neural_networks slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7452,9 +7452,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Uno de los modelos más complejos y <strong>poderosos</strong>.</p>
+<p>Los modelos más complejos y <strong>poderosos</strong>.</p>
 <p>Idea vieja, pero resucitada por disponibilidad de datos y hardware.</p>
-<p>Para aprendizaje supervisado, no supervisado, y por refuerzo. Un mundo de posibilidades...</p>
+<p>Para aprendizaje supervisado, no supervisado, y por refuerzo. Datos estructurados y no estructurados. E incluso generación de texto, imágenes, etc. Un mundo de posibilidades...</p>
 </div>
 </div>
 </div>
@@ -7492,19 +7492,6 @@ main {
 <li>... y tenemos hardware y datos.</li>
 <li>Cuando trabajamos con imágenes, video, audio y más.</li>
 <li>Cuando alguien ya entrenó y publicó una red que hace lo que queremos, o muy parecido.</li>
-</ul>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>Hype?</li>
 </ul>
 </div>
 </div>
@@ -7959,6 +7946,30 @@ main {
 </div>
 </div>
 </div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="" src="images/zoo.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Muy buen resumen de la utilidad de cada arquitectura!:</p>
+<p><a href="http://www.asimovinstitute.org/neural-network-zoo/">THE NEURAL NETWORK ZOO</a></p>
+<p>Nosotros vamos a ver solo dos de ellas, el MLP (las que vimos recién) y las Convolucionales (la clase que viene).</p>
+</div>
+</div>
+</div>
 </div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7966,10 +7977,10 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Pregunta difícil de responder: depende del caso, mirar cosas que hizo otra gente, etc.</p>
+<p>Cuál usamos entonces? Pregunta difícil de responder: depende del caso, mirar cosas que hizo otra gente, buscar, etc. Pero:</p>
 <ul>
-<li>Pocas? Podemos no lograr buen resultado.</li>
-<li>Muchas? Podemos sobreentrenar, y puede ser muy lento.</li>
+<li>Pocas neuronas? Podemos no lograr buen resultado.</li>
+<li>Muchas neuronas? Podemos sobreentrenar, y puede ser muy lento.</li>
 </ul>
 </div>
 </div>
@@ -7992,7 +8003,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Lo habitual es:</p>
+<p>Paras la mayoría lo habitual es:</p>
 <ul>
 <li>Relu, Tanh o Sigmoidea en capas intermedias.</li>
 <li>Sigmoidea en capa de salida de redes con una sola salida entre 0 y 1.</li>
@@ -8060,7 +8071,7 @@ main {
 <h1 id="Y-algunos-consejos-m%C3%A1s">Y algunos consejos más<a class="anchor-link" href="#Y-algunos-consejos-m%C3%A1s">¶</a></h1><ul>
 <li>Normalizar las entradas.</li>
 <li>Como siempre, entrenar y testear con sets separados. Las redes neuronales pueden overfitear muy fácil!</li>
-<li>Probar cambios de a <strong>una</strong> cosa a la vez.</li>
+<li>Probar cambios de a <strong>pocas</strong> cosas a la vez.</li>
 </ul>
 </div>
 </div>
@@ -8076,713 +8087,6 @@ main {
 <p>Capa que "apaga" conexiónes de forma aleatoria.</p>
 <p><strong>Para qué?</strong></p>
 <p>Para evitar que cada capa se "memorice" resultados que tiene que dar para determinados inputs (overfit interno y de la red en general).</p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Zool%C3%B3gico-de-redes-neuronales">Zoológico de redes neuronales<a class="anchor-link" href="#Zool%C3%B3gico-de-redes-neuronales">¶</a></h1>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>MLP es el tipo más común, pero hay <strong>muchas</strong> otras formas de neuronas.</p>
-<p>Principalmente lo que cambia es la <strong>arquitectura de la red</strong>, la forma en la que las neuronas están conectadas.</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/zoo.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Muy buen resumen de la utilidad de cada arquitectura!:</p>
-<p><a href="http://www.asimovinstitute.org/neural-network-zoo/">THE NEURAL NETWORK ZOO</a></p>
-<p>Nosotros vamos a ver un poco de 3 de ellas...</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Autoencoders">Autoencoders<a class="anchor-link" href="#Autoencoders">¶</a></h1>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Esto es un poco loco...</p>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/autoencoders.png"/></p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Entrenamos usando las entradas también como salidas!</p>
-<p>Ej:</p>
-<p>entrada=<code>["fisa", 30, "espadas"]</code></p>
-<p>salida=<code>["fisa", 30, "espadas"]</code></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Como la red se <strong>achica en el medio</strong>, entonces tiene que <strong>comprimir la información de entrada</strong> de alguna forma, para que termine siendo expresada en menos números.</p>
-<p>Pero como luego desde esos pocos números tiene que volver a generar las salidas originales, tiene que poder <strong>descomprimir la información comprimida</strong>.</p>
-<p>Termina aprendiendo dos redes juntas: una que <strong>comprime</strong> información, y otra que la <strong>descomprime</strong>... Nuestro propio algoritmo de compresión!</p>
-<p>Inentendible, pero que quizás funciona mejor para nnuestro problema, que los algoritmos genéricos de compresión.</p>
-<p>También se puede usar para <strong>reducir dimensionalidad</strong> de un set de datos (para visualizarlo, dárselo a modelos más simples, etc).</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Redes-generadoras">Redes generadoras<a class="anchor-link" href="#Redes-generadoras">¶</a></h1>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Esto es <strong>muy</strong> loco.</p>
-<p><code>"The coolest idea in machine learning in the last twenty years"</code></p>
-<p>-- Yann LeCun</p>
-<p><code>"Pretty much all interesting AI approaches involve GANs in the middle"</code></p>
-<p>-- Eric Smith</p>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Generative-Adversarial-Networks-(GANs)">Generative Adversarial Networks (GANs)<a class="anchor-link" href="#Generative-Adversarial-Networks-(GANs)">¶</a></h3><h3 id="Generative-Pre-trained-Transformers-(GPTs)">Generative Pre-trained Transformers (GPTs)<a class="anchor-link" href="#Generative-Pre-trained-Transformers-(GPTs)">¶</a></h3>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generación de imágenes</p>
-<p><img alt="" src="images/generative1.webp"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/generative2.webp"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/generative3.webp"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/gan_faces.png"/></p>
-<p><a href="https://www.whichfaceisreal.com/">https://www.whichfaceisreal.com/</a></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Transferencia de estilo</p>
-<p><img alt="" src="images/style1.webp"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/transfer_style3.jpg"/></p>
-</div>
-</div>
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span>
-<span class="n">IFrame</span><span class="p">(</span><span class="s2">"https://www.youtube.com/embed/b5AWhh6MYCg"</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<iframe allowfullscreen="" frameborder="0" height="500" src="https://www.youtube.com/embed/b5AWhh6MYCg" width="800"></iframe>
-</div>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Super resolution</p>
-<p><img alt="" src="images/gan_resolution.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Refill</p>
-<p><img alt="" src="images/gan_refill.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generación de texto</p>
-<p><img alt="" src="images/text1.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generación de texto</p>
-<p><img alt="" src="images/text2.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generación de código</p>
-<p><img alt="" src="images/code.png"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="GANs:-C%C3%B3mo-funcionan???">GANs: Cómo funcionan???<a class="anchor-link" href="#GANs:-C%C3%B3mo-funcionan???">¶</a></h1>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/gans.svg"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>La red <strong>discriminadora</strong> intenta predecir correctamente si sus entradas son un ejemplo real o un ejemplo generado.</p>
-<p>La red <strong>generadora</strong> trata de generar ejemplos que confundan a la red discriminadora, a partir de entradas (que pueden ser random, o algún tipo de dato relacionado. Ej: dibujo a mano).</p>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Primero entrenamos un poco la red <strong>discriminadora</strong>, hasta que sepa reconocer bien la cosa que queremos generar después (ej: fotos de perros vs fotos de no-perros).</p>
-<p>Luego empezamos a generar ejemplos con la <strong>generadora</strong>, y se los pasamos a la <strong>discriminadora</strong>. Cuanto mejor prediga la discriminadora, <strong>más error</strong> le devolvemos a la generadora.</p>
-<p>Seguimos entrenando ambas redes <strong>a la vez</strong>, que a partir de ahora <strong>compiten</strong> (una por detectar bien perros reales, la otra por generar perros que parezcan reales).</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Diffusion-models:-C%C3%B3mo-funcionan???">Diffusion models: Cómo funcionan???<a class="anchor-link" href="#Diffusion-models:-C%C3%B3mo-funcionan???">¶</a></h1>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generación de imágenes</p>
-<p><img alt="" src="images/diffusion-model.gif"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>No nos vamos a meter demasiado en la matemática detrás, pero básicamente:</p>
-<ul>
-<li>Tomamos imágenes reales.</li>
-<li>Las convertimos en ruido, por ejemplo agregando ruido gausiano.</li>
-<li>Entrenamos una red que intente <strong>sacar</strong> el ruido de la imagen: ruido como input, imagen como output.</li>
-<li>Nuestra red ahora puede recibir nuevo ruido <strong>random</strong> y producir una imagen como resultado.</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Para elegir qué dibujar, podemos agregar inputs a la red (categoría, texto, clases por regiones, etc).</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="GPTs:-C%C3%B3mo-funcionan???">GPTs: Cómo funcionan???<a class="anchor-link" href="#GPTs:-C%C3%B3mo-funcionan???">¶</a></h1>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Es un concepto <strong>muy</strong> avanzado para lo que llegamos a cubrir en la materia. Pero algunas generalidades y un poco de historia:</p>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>Language models hay desde hace rato: redes recurrentes, LSTMs, pero tenían problemas por el enfoque (el texto "viajando" dentro de la red de a pasos, retroalimentación para recordar inputs anteriores, gradientes).</li>
-<li>Transformers! All you need is attention. Ya no recurrentes, ver todo y parte de la red usada para decidir dónde enfocarse (GPT3 = 2048 words, GPT4 = 25000 words).</li>
-</ul>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>En los LLMs actuales:</p>
-<ul>
-<li>Es todo predicción de próximo token. A veces con pasos extras (ej: internal monologue).</li>
-<li>Inputs: cadena de tokens. Output: para cada token existente, la probabilidad de venir luego del input.</li>
-<li>Entrenadas con volúmenes gigantes de textos de ejemplo, usando el último token de cada ejemplo (conocido) como target esperado (la red no lo recibe en los inputs).</li>
-<li>Muy potentes, pero también muy ineficientes y costosos actualmente. Quizás mejore? (con cosas como Mix of Experts (MoE), multi token prediction, etc).</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Redes-Convolucionales">Redes Convolucionales<a class="anchor-link" href="#Redes-Convolucionales">¶</a></h1><h2 id="Motivaci%C3%B3n">Motivación<a class="anchor-link" href="#Motivaci%C3%B3n">¶</a></h2><p><em>Un repaso de como se veria una red Densa</em></p>
-<div><img alt="No description has been provided for this image" src="images/mnist_multilayer.png" style="float: left; margin: 10px;" width="400"/></div>
-<div style="float: left; margin: 10px;">
-<ul>
-<li>¿Cuántos pesos tiene cada neurona?</li>
-<li>¿Se comparte información entre distintas ubicaciones de la imagen?</li>
-</ul>
-</div>
-<div style="clear:both;"></div>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Otra-forma-de-interpretar-los-layers-intermedios">Otra forma de interpretar los layers intermedios<a class="anchor-link" href="#Otra-forma-de-interpretar-los-layers-intermedios">¶</a></h2><h3 id="Feature-maps">Feature maps<a class="anchor-link" href="#Feature-maps">¶</a></h3><p><em>Podemos pensarlo como neuronas que se activan con determinada lógica, que siguen la posición espacial de la imagen original</em></p>
-<div><img alt="No description has been provided for this image" src="images/feature_maps.png" style="margin: 10px;" width="600"/></div>
-<ul>
-<li>Interesa mantener información espacial y destacar alguna propiedad particular</li>
-<li>Interesa ir condensando información</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="%C2%BFC%C3%B3mo-funciona-la-operaci%C3%B3n-de-convoluci%C3%B3n?">¿Cómo funciona la operación de convolución?<a class="anchor-link" href="#%C2%BFC%C3%B3mo-funciona-la-operaci%C3%B3n-de-convoluci%C3%B3n?">¶</a></h2><div><img alt="No description has been provided for this image" src="images/conv_explanation.jpg" style="float: left;" width="50%"/></div>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1-canal">1 canal<a class="anchor-link" href="#1-canal">¶</a></h3><p><img alt="" src="images/conv_animation.gif"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3-canales,-2-filtros">3 canales, 2 filtros<a class="anchor-link" href="#3-canales,-2-filtros">¶</a></h3><p><img alt="" src="images/conv_calculation.png"/></p>
-<p><a href="https://cs231n.github.io/convolutional-networks/">https://cs231n.github.io/convolutional-networks/</a></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Respecto-de-los-problemas-planteados-originalmente">Respecto de los problemas planteados originalmente<a class="anchor-link" href="#Respecto-de-los-problemas-planteados-originalmente">¶</a></h2><h3 id="Gran-cantidad-de-pesos">Gran cantidad de pesos<a class="anchor-link" href="#Gran-cantidad-de-pesos">¶</a></h3><ul>
-<li>Si suponemos imagenes de 227x227x3, <strong>cada neurona</strong> de un feature map tendría 154.588 pesos para aprender</li>
-<li>Al conectar las neuronas con una <strong>porción</strong> (receptive field) de la imagen de entrada se reduce drásticamente ese número</li>
-<li>Por ejemplo, si cada neurona se conecta con una porción de 11x11, los pesos de esa neurona serían solo 364 (11x11x3 + 1)</li>
-<li>Ese conjunto de pesos se denomina <strong>filtro</strong> y es lo que se <strong>aprende</strong> cuando entrenamos</li>
-<li>Al convolucionar un filtro sobre la imagen de entrada obtenemos un <strong>feature map</strong></li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Respecto-de-los-problemas-planteados-originalmente">Respecto de los problemas planteados originalmente<a class="anchor-link" href="#Respecto-de-los-problemas-planteados-originalmente">¶</a></h2><h3 id="Informaci%C3%B3n-espacial-compartida">Información espacial compartida<a class="anchor-link" href="#Informaci%C3%B3n-espacial-compartida">¶</a></h3><ul>
-<li>Este problema se soluciona al utilizar siempre el mismo "conjunto de pesos" (a.k.a. <strong>filtro</strong>) para generar el feature map.</li>
-</ul>
-<p>Este hecho vuelve a reducir el número de parametros. Siguiendo el ejemplo anterior, si queremos que nuestros feature maps esten compuestos de 81 neuronas cada uno (9x9), sin compartir pesos tendriamos 364 * 81 = 29.484 pesos.</p>
-<p>Compartiendo los parámetros nos quedamos con solo 364 pesos.</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Par%C3%A1metros-y-conceptos-m%C3%A1s-comunes">Parámetros y conceptos más comunes<a class="anchor-link" href="#Par%C3%A1metros-y-conceptos-m%C3%A1s-comunes">¶</a></h4><ul>
-<li><strong>Input size W</strong>: el tamaño de la entrada</li>
-<li><strong>filters:</strong> cantidad de filtros</li>
-<li><strong>kernel_size F:</strong> tamaño del kernel; se establece el ancho y alto, la profundidad depende de las entradas</li>
-<li><strong>strides S:</strong> la cantidad de pasos que muevo el kernel</li>
-<li><strong>padding P:</strong> agrega ceros en los bordes para mantener el tamaño original</li>
-<li><strong>activation:</strong> función de activación aplicada <code>pixel a pixel</code></li>
-</ul>
-<p>La cantidad de neuronas de salida es <strong>(W - F + 2P)/S + 1</strong></p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Pooling">Pooling<a class="anchor-link" href="#Pooling">¶</a></h3><div><img alt="No description has been provided for this image" src="images/max_pooling.png" style="float: left;" width="30%"/></div>
-<ul>
-<li>Se usan para reducir la cantidad de parametros (2 stride, kernel de 2, 2 reduce a 25% la cantidad de parametros)</li>
-<li>Hace mas complicado el sobreentrenamiento</li>
-<li>No hay aprendizaje (operación fija)</li>
-<li>Trabaja de forma independiente en cada profundidad. Ej: Input=(4, 4, 3) F=2, S=2, Output=(2, 2, 3)</li>
-</ul>
-<p>La versión más común es max pooling</p>
-<div style="clear:both;"></div>
-<p><a href="http://textminingonline.com/dive-into-tensorflow-part-v-deep-mnist">http://textminingonline.com/dive-into-tensorflow-part-v-deep-mnist</a></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Una-red-completa">Una red completa<a class="anchor-link" href="#Una-red-completa">¶</a></h3><p>En algún momento, aplanamos la disposición de las neuronas para obtener un vector y continuar con una red fully connected convencional..</p>
-<div><img alt="No description has been provided for this image" src="images/neural_network_complete.png" style="float: left;" width="100%"/></div>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Las convoluciones pueden terminar aprendiendo <strong>"features"</strong> de la imagen <strong>de a poco</strong>, desde conceptos más simples a más complejos.</p>
-<p>Ej:primer convolución reconoce tipo de terreno en base a pixeles (planta, agua, cemento, arena). La siguiente convolución reconoce ciudad/playa/bosque/desierto en base a los tipos de terreno y su posición en la salida de la capa anterior (ej: agua + arena = playa). La siguiente convolución reconoce la región del país, en base a cuántas playas, bosques, ciudades, etc ve en las salidas de la anterior.</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>Son <strong>muy</strong> efectivas para trabajar con imágenes. El estándar hoy en día.</li>
-<li>Son muy pesadas de calcular.</li>
-<li>Implica determinar cosas nuevas: qué tamaño tienen los kernels, cuántas convoluciones, etc.</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Deep-learning?">Deep learning?<a class="anchor-link" href="#Deep-learning?">¶</a></h1><p><em>The hierarchy of concepts enables the computer to learn complicated concepts bybuilding them out of simpler ones. If we draw a graph showing how these concepts are built on top of each other, the graph is deep, with many layers. For this reason,we call this approach to AI deep learning.</em></p>
-<p><strong>Goodfellow et al 2016</strong></p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Transfer-Learning">Transfer Learning<a class="anchor-link" href="#Transfer-Learning">¶</a></h1><h2 id="Qu%C3%A9-es?">Qué es?<a class="anchor-link" href="#Qu%C3%A9-es?">¶</a></h2><ul>
-<li>Tomar un modelo entrenado para la tarea <em>A</em> y reutilizarlo para hacer la tarea <em>B</em></li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Para-que?">Para que?<a class="anchor-link" href="#Para-que?">¶</a></h2><ul>
-<li>Principalmente, para evitar conseguir y/o etiquetar un dataset</li>
-<li>Beneficio adicional, nos ahorramos mucho poder de cómputo en el entrenamiento</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="C%C3%B3mo?">Cómo?<a class="anchor-link" href="#C%C3%B3mo?">¶</a></h2><ul>
-<li>Buscamos un modelo entrenado</li>
-<li>Reemplazamos las capas finales, frizamos las iniciales y entrenamos</li>
-<li>A medida que el aprendizaje queda "estancado" podemos comenzar a des-frizar capas del final para ajustar mejor el descubrimiento de features (a este proceso se lo conoce como <strong>fine tuning</strong></li>
-</ul>
-<div><img alt="No description has been provided for this image" src="images/transfer_learning.jpg" style="float: center;" width="75%"/></div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Synthetic-data-generation">Synthetic data generation<a class="anchor-link" href="#Synthetic-data-generation">¶</a></h1><h2 id="Qu%C3%A9-es?">Qué es?<a class="anchor-link" href="#Qu%C3%A9-es?">¶</a></h2><ul>
-<li>Generar ejemplos a partir de ejemplos existentes</li>
-</ul>
-<h2 id="Para-qu%C3%A9?">Para qué?<a class="anchor-link" href="#Para-qu%C3%A9?">¶</a></h2><ul>
-<li>Para evitar sobre-entrenamiento</li>
-</ul>
-<h2 id="Como?">Como?<a class="anchor-link" href="#Como?">¶</a></h2><ul>
-<li>Aplicando algunas operaciones sobre los datos de entrada</li>
-</ul>
-<p>Para investigar un poco...(<a href="https://keras.io/api/preprocessing/image/#imagedatagenerator-class">https://keras.io/api/preprocessing/image/#imagedatagenerator-class</a>)</p>
 </div>
 </div>
 </div>
