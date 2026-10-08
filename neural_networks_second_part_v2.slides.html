@@ -14694,7 +14694,6 @@ div.jp-OutputPrompt {
 <li><strong>Datos no estructurados</strong>: qué son, cómo se representan y por qué son difíciles</li>
 <li><strong>Redes convolucionales (CNN)</strong>: filtros, feature maps, padding, stride, pooling, dropout</li>
 <li><strong>CNN Explainer</strong>: recorrido interactivo de una red completa</li>
-<li><em>Corte</em></li>
 <li><strong>CNN en Keras</strong>: una red real, de punta a punta</li>
 <li><strong>Data augmentation</strong> y <strong>transfer learning</strong></li>
 <li><strong>Modelos generativos en NLP</strong>: nociones básicas de los LLMs</li>
@@ -14881,7 +14880,6 @@ div.jp-OutputPrompt {
 <h3 id="Embeddings:-palabras-como-vectores">Embeddings: palabras como vectores<a class="anchor-link" href="#Embeddings:-palabras-como-vectores">&#182;</a></h3><div><img src="images/word_embeddings.png" width="35%" style="float: left; margin: 10px;"></div><ul>
 <li>Cada token se representa con un vector de cientos de números</li>
 <li>Se aprenden de forma que palabras usadas en contextos parecidos queden <strong>cerca</strong></li>
-<li>Es la misma idea que vamos a ver en las CNN: <strong>la red aprende la representación</strong>, no se la damos hecha</li>
 </ul>
 <div style="clear:both;"></div>
 </div>
@@ -15100,7 +15098,6 @@ div.jp-OutputPrompt {
 <ul>
 <li>La red recibe los datos <strong>crudos</strong> y <strong>aprende las features</strong> necesarias para la tarea (aprendizaje <em>end-to-end</em>)</li>
 <li>Necesita arquitecturas que <strong>aprovechen la estructura</strong> de los datos: convoluciones para lo espacial, secuencias/atención para el texto</li>
-<li>El punto de quiebre: <strong>ImageNet 2012</strong>. Una CNN (AlexNet) bajó el error top-5 de ~26% a ~15%. Desde entonces el deep learning domina en imágenes, audio y texto</li>
 </ul>
 
 </div>
@@ -15313,7 +15310,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Filtros-sobre-una-imagen-real">Filtros sobre una imagen real<a class="anchor-link" href="#Filtros-sobre-una-imagen-real">&#182;</a></h3><p>Antes del deep learning, estos filtros se <strong>diseñaban a mano</strong>:</p>
+<h3 id="Filtros-sobre-una-imagen-real">Filtros sobre una imagen real<a class="anchor-link" href="#Filtros-sobre-una-imagen-real">&#182;</a></h3><p>Anteriormente, estos filtros se <strong>diseñaban a mano</strong>:</p>
 
 </div>
 </div>
@@ -15414,11 +15411,11 @@ jp-needs-light-background
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="El-filtro-como-neurona">El filtro como neurona<a class="anchor-link" href="#El-filtro-como-neurona">&#182;</a></h2><p><img src="images/convolution_neuron.svg" alt=""></p>
+<p><img src="images/convolution_neuron.svg" alt=""></p>
 <ul>
-<li>Un filtro es una <strong>neurona</strong> conectada sólo a una porción de la imagen (su <em>receptive field</em>)</li>
+<li>Cada filtro se aplica a toda la imagen, "mirando" de a partes (<em>receptive field</em>)</li>
 <li>Los pesos <code>p1..p4</code> son <strong>los mismos</strong> en todas las posiciones</li>
-<li>La salida de esa neurona en todas las posiciones forma un <strong>feature map</strong></li>
+<li>La salida de esa operación en todas las posiciones forma un <strong>feature map</strong></li>
 </ul>
 
 </div>
@@ -15435,21 +15432,6 @@ jp-needs-light-background
 <ul>
 <li>Cada filtro aprende a detectar un patrón distinto (bordes en distintas direcciones, colores, texturas...)</li>
 <li>Los feature maps se apilan: la salida de la capa tiene <strong>profundidad = cantidad de filtros</strong></li>
-</ul>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Feature-maps">Feature maps<a class="anchor-link" href="#Feature-maps">&#182;</a></h3><div><img src="images/feature_maps.png" width="600" style="margin: 10px;"></div><ul>
-<li>Mantienen la <strong>información espacial</strong>: cada feature map sigue siendo una "imagen", donde se destaca una propiedad particular</li>
-<li>Las capas siguientes trabajan sobre estos mapas, <strong>condensando</strong> información</li>
 </ul>
 
 </div>
@@ -15500,8 +15482,7 @@ jp-needs-light-background
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Informaci%C3%B3n-espacial-compartida-%E2%86%92-pesos-compartidos">Informaci&#243;n espacial compartida &#8594; pesos compartidos<a class="anchor-link" href="#Informaci%C3%B3n-espacial-compartida-%E2%86%92-pesos-compartidos">&#182;</a></h3><ul>
 <li>Usamos siempre el mismo filtro para generar todo el feature map</li>
-<li>Siguiendo el ejemplo: un feature map de 9x9 = 81 neuronas. Sin compartir pesos serían 364 * 81 = 29.484 pesos. <strong>Compartiendo, sólo 364</strong></li>
-<li>Bonus: si el patrón aparece en otro lugar, <strong>el mismo filtro lo detecta</strong> → resuelve el problema del "7" desplazado</li>
+<li>Si el patrón aparece en otro lugar, <strong>el mismo filtro lo detecta</strong> → resuelve el problema del "7" desplazado</li>
 </ul>
 
 </div>
@@ -16512,7 +16493,6 @@ jp-needs-light-background
 <li>Diagnóstico por imágenes médicas (radiografías, lesiones de piel)</li>
 <li>Detección de enfermedades en hojas de cultivos, conteo de plantas en imágenes de drones</li>
 <li>Control de calidad en líneas de producción (detección de defectos)</li>
-<li>Clasificación de comida: ver <code>transfer_learning/Transfer learning con VGG16.ipynb</code> (Food-101)</li>
 </ul>
 
 </div>
@@ -16734,18 +16714,6 @@ _________________________________________________________________
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="images/text2.png" alt=""></p>
-
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Generación de código</p>
 <p><img src="images/code.png" alt=""></p>
 
@@ -16825,7 +16793,6 @@ _________________________________________________________________
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="En-los-LLMs-actuales">En los LLMs actuales<a class="anchor-link" href="#En-los-LLMs-actuales">&#182;</a></h2><ul>
 <li>Es todo predicción de próximo token. A veces con pasos extra (ej: "razonar" en voz alta antes de responder)</li>
-<li>Inputs: cadena de tokens. Output: para cada token existente, la probabilidad de venir luego del input</li>
 <li>Muy potentes, pero también muy costosos de entrenar y de usar. Se buscan mejoras de eficiencia (Mixture of Experts, multi-token prediction, modelos más chicos y especializados, etc.)</li>
 <li>Limitaciones: pueden <strong>"alucinar"</strong> (generar algo plausible pero falso), reproducir <strong>sesgos</strong> de los datos, y no "saben" nada posterior a sus datos de entrenamiento</li>
 </ul>
@@ -16869,7 +16836,7 @@ _________________________________________________________________
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>Los datos <strong>no estructurados</strong> son tensores enormes de valores crudos, sin features con significado y con <strong>estructura local</strong> (espacial, temporal, secuencial)</li>
-<li>El enfoque tradicional diseñaba features a mano; el <strong>deep learning</strong> las aprende de los datos crudos</li>
+<li>El enfoque tradicional diseñaba features a mano; con <strong>deep learning</strong> se aprenden de los datos crudos</li>
 <li>Las <strong>CNN</strong> aprovechan la estructura espacial con <strong>filtros</strong> chicos de pesos compartidos que generan <strong>feature maps</strong>, y construyen una <strong>jerarquía</strong> de features</li>
 <li><strong>Pooling</strong> reduce tamaño, <strong>dropout</strong> y <strong>data augmentation</strong> combaten el overfitting</li>
 <li><strong>Transfer learning</strong>: reutilizar lo que aprendió un modelo grande, con pocos datos y poco cómputo</li>
