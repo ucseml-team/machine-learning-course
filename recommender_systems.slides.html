@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>recommender_systems slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7475,10 +7475,10 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Sistema capaz de predecir el <strong>rating</strong> que un usuario dará a elementos de un conjunto</li>
-<li>Usualmente basado en tener ratings anteriores de esa persona y de otros usuarios</li>
-<li>Una de las aplicaciones más importantes de machine learning</li>
-<li>Muy populares en los últimos años</li>
+<li>Sistema capaz de predecir el <strong>rating</strong> que un usuario dará a elementos de un conjunto.</li>
+<li>Usualmente basado en tener ratings anteriores de esa persona y de otros usuarios.</li>
+<li>Una de las aplicaciones más importantes de machine learning.</li>
+<li>Muy populares desde hace décadas, siguen super vigentes.</li>
 </ul>
 </div>
 </div>
@@ -7490,7 +7490,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Aplicaciones-reales">Aplicaciones reales<a class="anchor-link" href="#Aplicaciones-reales">¶</a></h3>
+<h2 id="Aplicaciones-reales">Aplicaciones reales<a class="anchor-link" href="#Aplicaciones-reales">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7504,8 +7504,8 @@ main {
 <ul>
 <li>Amazon / Mercado libre ...</li>
 <li>Netflix / Youtube / Spotify ...</li>
-<li>Facebook / Twitter / ...</li>
-<li>Google</li>
+<li>Twitter / TikTok / Instagram ...</li>
+<li>Google / ads ...</li>
 <li>Banca/seguros</li>
 <li>...</li>
 </ul>
@@ -7519,48 +7519,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<table>
-<thead>
-<tr>
-<th>Película</th>
-<th style="text-align:center">Pedro</th>
-<th style="text-align:right">Emilia</th>
-<th style="text-align:right">Martín</th>
-<th style="text-align:right">Paola</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Plaga zombie</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-</tr>
-<tr>
-<td>Freddy vs Jason</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-</tr>
-<tr>
-<td>Saw 1</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-</tr>
-<tr>
-<td>Sintonía de amor</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-</tr>
-</tbody>
-</table>
-<p>| Titanic          |     ? |      ? |      ?  |     ?  |?</p>
+<h2 id="T%C3%A9cnicas">Técnicas<a class="anchor-link" href="#T%C3%A9cnicas">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7571,10 +7530,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>$n_u$ = cantidad de usuarios/personas</p>
-<p>$n_m$ = cantidad de películas</p>
-<p>$r(i,j)$ = 1 si el usuario <strong>"j"</strong> dejó su opinión sobre la película <strong>"i"</strong>, 0 si no</p>
-<p>$y(i,j)$ = rating del usuario <strong>"j"</strong> sobre la película <strong>"i"</strong></p>
+<p>Hay muchas. Nosotros vamos a ver una de ejemplo: <strong>Filtros Colaborativos</strong>.</p>
 </div>
 </div>
 </div>
@@ -7585,18 +7541,34 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>En base a tener algunos de esos datos, vamos a intentar predecir los que no tenemos.</p>
+<h2 id="Filtros-Colaborativos">Filtros Colaborativos<a class="anchor-link" href="#Filtros-Colaborativos">¶</a></h2>
 </div>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Feedback:-expl%C3%ADcito-o-impl%C3%ADcito?">Feedback: explícito o implícito?<a class="anchor-link" href="#Feedback:-expl%C3%ADcito-o-impl%C3%ADcito?">¶</a></h3>
+<p>Se basa en la idea de que dos personas que tuvieron opiniones parecidas en el pasado también las tendrán en el futuro.</p>
+<p><strong>No</strong> conocemos explicitamente el detalle de las preferencias de los usuarios.</p>
+<p><strong>No</strong> conocemos las características de cada item (película/reel/producto/etc).</p>
+<p><strong>Sí</strong> conocemos algunas puntuaciones de los usuarios a algunos items.</p>
+<p>"No conozco los gustos personales de Pedro ni tengo idea de qué son estos videos, pero a él y a Emilia le suelen gustar los mismos videos. Entonces si este nuevo video le gustó a Emilia, probablemente le guste también a Pedro!".</p>
+<p>Ej: Tiktok, Instagram, Youtube, etc.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Feedback:-expl%C3%ADcito-o-impl%C3%ADcito?">Feedback: explícito o implícito?<a class="anchor-link" href="#Feedback:-expl%C3%ADcito-o-impl%C3%ADcito?">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7633,7 +7605,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Recomendaciones-basadas-en-contenido">Recomendaciones basadas en contenido<a class="anchor-link" href="#Recomendaciones-basadas-en-contenido">¶</a></h2>
+<h2 id="Caracter%C3%ADsticas">Características<a class="anchor-link" href="#Caracter%C3%ADsticas">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7644,11 +7616,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Se basa en la idea de que dos elementos parecidos entre sí deberían recibir opiniones similares por parte de un mismo usuario.</p>
-<p><strong>No</strong> conocemos el detalle de las preferencias de los usuarios (no se si a Pedro le gustan las de terror o las románticas).</p>
-<p><strong>Sí</strong> conocemos las características de cada película (si es de terror o romántica).</p>
-<p><strong>Sí</strong> conocemos algunas puntuaciones de los usuarios a algunas películas.</p>
-<p>"Pedro no me dijo qué género le gusta, pero estas dos películas son de terror y dijo que le gustaron, así que le deben gustar las películas de terror".</p>
+<p>Podríamos pensar que los videos tienen características numéricas (ej: "cuánto de terror tiene?", "cuánto romance tiene?", etc).</p>
+<p>Y podríamos pensar que los usuarios tienen un número por cada característica también, indicando cuánto les gusta eso ("cuánto me gusta el terror?", "cuánto me gusta el romance?", etc).</p>
+<p>Pero no vamos a decidir qué son esas características. Vamos a dejar que el modelo elija qué significa cada una!</p>
 </div>
 </div>
 </div>
@@ -7662,92 +7632,39 @@ main {
 <table>
 <thead>
 <tr>
-<th>Película</th>
-<th style="text-align:center">Pedro</th>
-<th style="text-align:right">Emilia</th>
-<th style="text-align:right">Martín</th>
-<th>Paola</th>
-<th>X1 (terror)</th>
-<th>X2 (romántica)</th>
+<th>Video</th>
+<th>C1</th>
+<th>C2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Plaga zombie</td>
-<td style="text-align:center">5</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">0</td>
-<td>0</td>
-<td>0.9</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Freddy vs Jason</td>
-<td style="text-align:center">5</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td>0</td>
-<td>1.0</td>
-<td>0.01</td>
-</tr>
-<tr>
-<td>Saw 1</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">4</td>
-<td style="text-align:right">0</td>
+<td>zombie.mp4</td>
 <td>?</td>
-<td>0.99</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Sintonía de amor</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">5</td>
-<td>4</td>
-<td>0.1</td>
-<td>1.0</td>
-</tr>
-<tr>
-<td>Titanic</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">5</td>
 <td>?</td>
-<td>0</td>
-<td>0.9</td>
+</tr>
+<tr>
+<td>perrito.mp4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>vid20261009.mp4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>consejos.mp4</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>baile42.mp4</td>
+<td>?</td>
+<td>?</td>
 </tr>
 </tbody>
 </table>
-<p>.</p>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Por cada usuario voy a intentar aprender los parámetros de la recta que intentan replicar mejor los valores que tengo. Ejemplo:</p>
-<p>$f_{pedro}(x) = x_1 * 3.7 + x_2 * 0.2 + 1$</p>
-<p>3.7, 0.2 y 1 son los valores que tengo que encontrar, los <strong>parámetros</strong> para Pedro ($\theta_{pedro} = [3.7, 0.2, 1]$).</p>
-<p>La función recibe una película (como features $x$), y devuelve el rating que Pedro le da a esa película. La película es un vector de valores que la describen (en este ejemplo, "nivel de cada género").</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Vamos a expresar esa función de recta en forma vectorial, como siempre:</p>
-<p>$f_{pedro}(x) = x_1 * 3.7 + x_2 * 0.2 + 1$</p>
-<p>se convierte en:</p>
-<p>$f_{pedro}(x) = (\theta_{pedro})^T x$</p>
 </div>
 </div>
 </div>
@@ -7758,275 +7675,32 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>¿Cómo encontramos Θ?</strong> ¿Empezamos a probar al azar ?</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="" src="images/error_function.svg"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Podemos tratar de armar una función de error. Cuál es la diferencia entre una predicción y lo que realmente sabemos?:</p>
-<p>$f_{pedro}(x) - y^{(i,pedro)} $</p>
-<p>O lo que es lo mismo:</p>
-<p>$(\theta_{pedro})^T x - y^{(i,pedro)} $</p>
-<p>"el raiting que predecimos de una película, cuánto difiere del rating que conocemos que Pedro le dio?"</p>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generalizada para el set entero de películas:</p>
-<p>$E_{pedro} = \sum_{i:r(i,pedro)=1} ((\theta_{pedro})^T X^{(i)} - y^{(i,pedro)})^2$</p>
-<p>"para todas las películas (i) donde tenemos el raiting de Pedro, cuánto difiere nuestro rating predicho del rating conocido?" (error cuadrático)</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Y con la función de error, entonces volvemos a nuestro viejo conocido...</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Descenso-por-el-gradiente">Descenso por el gradiente<a class="anchor-link" href="#Descenso-por-el-gradiente">¶</a></h2><p><img alt="" src="images/gradient_descent.svg"/></p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Lo que terminamos aprendiendo son entonces <strong>las preferencias de Pedro</strong>. Cuánto le gustan las de terror, cuánto las románticas. Esos son sus pesos.</p>
-</div>
-</div>
-</div>
-</div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Y-el-resto-de-los-usuarios?">Y el resto de los usuarios?<a class="anchor-link" href="#Y-el-resto-de-los-usuarios?">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Tendría que armar una función por cada usuario? Tenemos que <strong>entrenar un modelo por cada usuario</strong>?? Por ahora parece que sí.</p>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Podemos en vez redefinir la función de error e integrar las salidas para todos los usuarios, para tener <strong>una sola función global, que sirve para todos los usuarios</strong>:</p>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>$E_{total} = \sum_{j=1}^{n_u} \sum_{i:r(i,j)=1} ((\theta^{(j)})^T X^{(i)} - y^{(i,j)})^2$</p>
-<p>"para todos los usuarios (j), para todas las películas (i), donde tengamos el raiting del usuario para esa película, cuánto difiere nuestro rating predicho del rating conocido?" (error cuadrático)</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ahora θ, lo que aprendemos, es un array de dos dimensiones, con los valores para cada usuario:</p>
 <table>
 <thead>
 <tr>
 <th>Usuario</th>
-<th style="text-align:right">θ(0)</th>
-<th style="text-align:right">θ(1)</th>
-<th>θ(2)</th>
+<th>G1</th>
+<th>G2</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Pedro</td>
-<td style="text-align:right">3.7</td>
-<td style="text-align:right">0.2</td>
-<td>1.0</td>
+<td>?</td>
+<td>?</td>
 </tr>
 <tr>
 <td>Emilia</td>
-<td style="text-align:right">4.1</td>
-<td style="text-align:right">0.5</td>
-<td>0.3</td>
+<td>?</td>
+<td>?</td>
 </tr>
 <tr>
 <td>Martín</td>
-<td style="text-align:right">0.1</td>
-<td style="text-align:right">4.3</td>
-<td>0.1</td>
+<td>?</td>
+<td>?</td>
 </tr>
 <tr>
 <td>Paola</td>
-<td style="text-align:right">1.2</td>
-<td style="text-align:right">5.3</td>
-<td>1.4</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Con θ, ahora podemos agarrar a cualquier usuario y cualquier película (de las que ya conocemos las características por definición), y usar la función para predecir qué tanto le va a gustar esa película.</p>
-<p>Con eso podemos hacer mil cosas (rankear recomendaciones, sugerir con qué seguir, ordenar búsquedas, etc).</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Recomendaciones-basadas-en-filtros-colaborativos">Recomendaciones basadas en filtros colaborativos<a class="anchor-link" href="#Recomendaciones-basadas-en-filtros-colaborativos">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Se basa en la idea de que dos personas que tuvieron opiniones parecidas en el pasado también las tendrán en el futuro.</p>
-<p><strong>No</strong> conocemos explicitamente el detalle de las preferencias de los usuarios.</p>
-<p><strong>No</strong> conocemos las características de cada película (si es de terror o romántica, o de qué género).</p>
-<p><strong>Sí</strong> conocemos algunas puntuaciones de los usuarios a algunas películas.</p>
-<p>"Pedro no me dijo qué género le gusta y encima tampoco se de qué género es cada película, pero a él y a Emilia le suelen gustar las mismas películas. Entonces si esta película le gustó a Emilia, probablemente le guste también a Pedro".</p>
-<p>Ej: Tiktok, Instagram, Youtube, etc.</p>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<table>
-<thead>
-<tr>
-<th>Película</th>
-<th style="text-align:center">Pedro</th>
-<th style="text-align:right">Emilia</th>
-<th style="text-align:right">Martín</th>
-<th>Paola</th>
-<th>X1 (terror)</th>
-<th>X2 (romántica)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Plaga zombie</td>
-<td style="text-align:center">5</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">0</td>
-<td>0</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>Freddy vs Jason</td>
-<td style="text-align:center">5</td>
-<td style="text-align:right">?</td>
-<td style="text-align:right">?</td>
-<td>0</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>Saw 1</td>
-<td style="text-align:center">?</td>
-<td style="text-align:right">4</td>
-<td style="text-align:right">0</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>Sintonía de amor</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">5</td>
-<td>4</td>
-<td>?</td>
-<td>?</td>
-</tr>
-<tr>
-<td>Titanic</td>
-<td style="text-align:center">0</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">5</td>
-<td>?</td>
 <td>?</td>
 <td>?</td>
 </tr>
@@ -8042,7 +7716,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Qu%C3%A9-pasar%C3%ADa-si-las-personas-nos-dijeran-sus-preferencias?">Qué pasaría si las personas nos dijeran sus preferencias?<a class="anchor-link" href="#Qu%C3%A9-pasar%C3%ADa-si-las-personas-nos-dijeran-sus-preferencias?">¶</a></h4>
+<h2 id="Matem%C3%A1tica-de-gustos">Matemática de gustos<a class="anchor-link" href="#Matem%C3%A1tica-de-gustos">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8053,12 +7727,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Si tenemos todos los vectores de parámetros ...</p>
-<p>$\theta(pedro) = [5, 0, 0]$</p>
-<p>$\theta(emilia) = [4, 1, 0]$</p>
-<p>$\theta(martin) = [0, 5, 0]$</p>
-<p>$\theta(paola) = [1, 4, 0]$</p>
-<p>Pero no tenemos los vectores de las películas... cómo podría ser la función de error?</p>
+<p>Podemos pensar una función que nos devuelva cuánto le gusta a un usuario un video, en base a las características del video y los gustos del usuario:</p>
+<p><code>f(usu, vid) = usu[G1] * vid[C1] + usu[G2] * vid[C2] ...</code></p>
+<p>Cuanto más de una característica tiene un video, y más gusto tiene un usuario por esa característica, mayor es el resultado final de cuánto le gusta ese video a ese usuario.</p>
 </div>
 </div>
 </div>
@@ -8069,9 +7740,19 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Podría ser igual!</p>
-<p>$E_{total} = \sum_{j=1}^{n_u} \sum_{i:r(i,j)=1} ((\theta^{(j)})^T X^{(i)} - y^{(i,j)})^2$</p>
-<p>"para todos los usuarios (j), para todas las películas (i), donde tengamos el raiting del usuario para esa película, cuánto difiere nuestro rating predicho del rating conocido?" (error cuadrático)</p>
+<p>Lo podemos expresar como una multiplicación de dos vectores (los vectores de valores del usuario y del video):</p>
+<p>$f(usu, vid) = usu^T * vid$</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Entrenando">Entrenando<a class="anchor-link" href="#Entrenando">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8082,7 +7763,54 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Solo tenemos un cambio</strong>: antes $\theta$ eran los pesos que no conocíamos y teníamos que aprender. Ahora esos ya los sabemos, están fijos, y lo que no conocemos y tenemos que aprender es...</p>
+<p>Tenemos una función, y tenemos muchos ejemplos de salidas esperadas.</p>
+<p>Ej: "si entran los vectores de Pedro y zombie.mp4, la salida debería ser 5 porque sabemos que le gustó mucho".</p>
+<p>Pero no sabemos qué valores poner en esos vectores para que la fórmula funcione en los casos que conocemos. Qué podemos hacer?...</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Descenso-por-el-gradiente!">Descenso por el gradiente!<a class="anchor-link" href="#Descenso-por-el-gradiente!">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="" src="images/gradient_descent.svg"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Cuáles son nuestros parámetros?</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Los vectores de todos los usuarios y todos los videos!</p>
+<p>Si tenemos 100.000 usuarios y 50.000 videos, y elegimos tener 8 características, entonces tenemos...</p>
 </div>
 </div>
 </div>
@@ -8093,8 +7821,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>$X!$</p>
-<p>(los vectores que describen a cada película)</p>
+<p><code>100.000 * 8 (users params) + 50.000 * 8 (videos params) = 1.200.000 params</code></p>
 </div>
 </div>
 </div>
@@ -8105,7 +7832,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Qu%C3%A9-pasar%C3%ADa-si-las-personas-NO-nos-dijeran-sus-preferencias?">Qué pasaría si las personas NO nos dijeran sus preferencias?<a class="anchor-link" href="#Qu%C3%A9-pasar%C3%ADa-si-las-personas-NO-nos-dijeran-sus-preferencias?">¶</a></h4>
+<p>Qué podemos usar como función de error para el descenso por el gradiente?</p>
 </div>
 </div>
 </div>
@@ -8116,8 +7843,56 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Podríamos utilizar los y(i, j) conocidos para aprender tanto las preferencias de los usuarios ($\theta$) como los vectores de las películas ($X$) al mismo tiempo. Misma función de error, y ahora tanto $\theta$ como $X$ son parámetros a aprender!</p>
-<p>$E_{total} = \sum_{j=1}^{n_u} \sum_{i:r(i,j)=1} ((\theta^{(j)})^T X^{(i)} - y^{(i,j)})^2$</p>
+<p>$n_u$ = cantidad de usuarios</p>
+<p>$r(v,u)$ = 1 si el usuario <strong>"u"</strong> dejó su opinión sobre el video <strong>"v"</strong>, 0 si no</p>
+<p>$y(v,u)$ = rating del usuario <strong>"u"</strong> sobre el video <strong>"v"</strong></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>$E_{total} = \sum_{u=1}^{n_u} \sum_{v:r(v,u)=1} (usuarios[u]^T * videos[v]) - y[v,u])^2$</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>por cada usuario, por cada video...</p>
+<p>...de los casos donde el usuario nos dijo cuánto le gustó ese video</p>
+<p>...calcular con nuestra fórmula cuánto le debería gustar</p>
+<p>...y compararlo (diferencia al cuadrado) con lo que sabemos que dijo de cuánto le gustó</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Recomendaciones">Recomendaciones<a class="anchor-link" href="#Recomendaciones">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Cómo hacemos nuevas predicciones? Cómo recomendamos videos a un usuario?</p>
 </div>
 </div>
 </div>
@@ -8128,7 +7903,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Una vez que eso está entrenado, tenemos tanto preferencias de los usuarios como características del contenido, podemos hacer predicciones con nuestra función de siempre: $(\theta^{(pedro)})^T X^{(peli)}$</p>
+<p>Buscamos videos que el usuario no vió, y usando nuestra fórmula (con los vectores de ese usuario y de los videos que no vio), predecimos cuánto le gustaría cada video.</p>
+<p>$f(usu, vid) = usu^T * vid$</p>
+<p>Teniendo el nivel de gusto predicho para cada video, elegimos cuáles recomendarle. <strong>Hay muchas formas de hacerlo!</strong></p>
 </div>
 </div>
 </div>
@@ -8139,9 +7916,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Qué significan ahora los valores de $\theta$ y $X$?</p>
-<p>De qué género es una película que terminó con $X^{(peli)} = [4.9, 0.1, 0]$ ?</p>
-<p>Qué películas le gustan a un usuario que terminó con $\theta^{(usuario)} = [4.5, 0.2, 0.5]$ ?</p>
+<h2 id="Interpretabilidad">Interpretabilidad<a class="anchor-link" href="#Interpretabilidad">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8152,7 +7927,43 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>No sabemos! Las preferencias y características ya no son definidas por nosotros! Solo elegimos "entrename 2 características" (y el bias), y el modelo encontró 2 valores para usar ahí, que hacen que las predicciones anden bien.</p>
+<p>Al terminar de entrenar, cada usuario y video tienen sus características seteadas:</p>
+<p>De qué género es un video que terminó con <code>[4.9, 0.1, 0]</code>?</p>
+<p>Qué tipo de videos le gustan a un usuario que terminó con <code>[4.5, 0.2, 0.5]</code>?</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>No sabemos! Las preferencias y características no fueron definidas por nosotros! Solo elegimos "entrename 3 características", y el modelo encontró 3 valores para usar ahí que hacen que las predicciones anden bien.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Y-si-tenemos-caracter%C3%ADsticas-conocidas?">Y si tenemos características conocidas?<a class="anchor-link" href="#Y-si-tenemos-caracter%C3%ADsticas-conocidas?">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Podemos especificar características para los items, o gustos para usuarios, o ambas, haciendo que algunos de los valores no sean parámetros entrenables sino valores que nosotros rellenamos de otra fuente.</p>
+<p>Esto anda muy bien. Ej: Netflix lo usa mucho.</p>
 </div>
 </div>
 </div>
@@ -8175,58 +7986,10 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Cold start: nuevo usuario? nueva pelicula?</li>
+<li>Cold start: nuevo usuario? nuevo video? Qué valores les ponemos?</li>
 <li>Escalabilidad: En muchos casos podemos tener cientos de miles o millones de cosas para recomendar, lo cual hace que obtener recomendaciones de forma automática y al instante sea todo un desafío.</li>
 <li>Datos dispersos (sparse data): Generalmente tenemos data de una número mucho menor al total disponible de elementos.</li>
 </ul>
-</div>
-</div>
-</div>
-</div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Actualidad:-enfoque-h%C3%ADbridos">Actualidad: enfoque híbridos<a class="anchor-link" href="#Actualidad:-enfoque-h%C3%ADbridos">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Existe evidencia empírica de que combinar ambos modelos puede ser una buena alternativa para obtener resultados mejores que si se utilizaran de forma aislada.</p>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Existen distintas principalmente dos formas de combinarlos:</p>
-<ul>
-<li>Combinando las salidas de ambos.</li>
-<li>Creando un único modelo que combine ambos enfoques (ej: algunas características cargadas por humanos y otras aprendidas).</li>
-</ul>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Un caso de ejemplo es Netflix, que realiza recomendaciones de películas a partir del historial de búsqueda y visitas de otros usuarios (filtros colaborativos) y de películas que tienen características similares (basados en contenido).</p>
 </div>
 </div>
 </div>
@@ -8290,7 +8053,6 @@ main {
 <ul>
 <li>Diversidad: mide cuánto se parecen las recomendaciones entre si (la idea subyacente es que a mayor diversidad, más probabilidades de acertar).</li>
 <li>Persistencia: mide el grado en el que ante situaciones semejantes, el criterio de selección se mantiene consistente.</li>
-<li>Privacidad: generalmente existen restricciones legales sobre la privacidad de los datos de los usuarios, lo cual limitan o condicionan la utilidad de un determinado sistema.</li>
 <li>Serendipity: Mide el grado en que una recomendación es predecible o "esperable".</li>
 <li>Coverage: a cuantos usuarios les puedo hacer recomendación</li>
 </ul>
